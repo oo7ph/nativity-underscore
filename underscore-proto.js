@@ -47,7 +47,16 @@ var install = function(protoObj, host, methods, thisIndex) {
 	}
 };
 
+var lambdinate = function(oldMappingFunction) {
+	return function(list, iterator, context) {
+		return oldMappingFunction(list, typeof iterator == "string" ? iterator.lambda() : iterator, context);
+	};
+};
+
 install(Array, _, ["first", "rest", "last", "compact", "flatten", "without", "difference", "uniq", "indexOf", "lastIndexOf", "each", "map", "reduce", "reduceRight", "detect", "select", "reject", "all", "any", "include", "invoke", "pluck", "max", "min", "sortBy", "groupBy", "sortedIndex", "size", "head", "tail", "unique", "forEach", "inject", "foldl", "foldr", "filter", "every", "some", "contains"]);
 install(Function, _, ["bind", "memoize", "delay", "defer", "throttle", "debounce", "once", "wrap", "compose"]);
 install(Function, _, ["after"], -1);
+
+_.map = lambdinate(_.map);
+_.each = lambdinate(_.each);
 
