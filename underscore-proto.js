@@ -3,6 +3,25 @@
 	@remarks	Includes all array and collection functions except: intersection, union, zip, range, toArray
 */
 
+/** Returns the in-bounds index of the given index for the array, supports negative and out-of-bounds indices. 
+		@private
+*/
+var circ = function(arr, i) {
+
+	// return first index if i is null or undefined
+	if(i === undefined || i === null) {
+		return arr[0];
+	}
+
+	// one modulus to get in range, another to eliminate negative
+	return (i % arr.length + arr.length) % arr.length;
+};
+
+/** Indexes into an array, supports negative indices. */
+var index = function(arr, i) {
+	return arr[circ(arr, i)];
+};
+
 /** Returns a new array containing the elements of the given array shifted n spaces to the left, wrapping around the end. */
 var rotate = function(arr, n) {
 	var output = [];
