@@ -72,7 +72,7 @@ var lambdinate = function(oldMappingFunction) {
 	};
 };
 
-install(Array, _, ["first", "rest", "last", "compact", "flatten", "without", "difference", "uniq", "indexOf", "lastIndexOf", "each", "map", "reduce", "reduceRight", "detect", "select", "reject", "all", "any", "include", "invoke", "pluck", "max", "min", "sortBy", "groupBy", "sortedIndex", "size", "head", "tail", "unique", "forEach", "inject", "foldl", "foldr", "filter", "every", "some", "contains"]);
+install(Array, _, ["first", "rest", "shuffle","last", "compact", "flatten", "without", "difference", "uniq", "indexOf", "lastIndexOf", "each", "map", "reduce", "reduceRight", "detect", "select", "reject", "all", "any", "include", "invoke", "pluck", "max", "min", "sortBy", "groupBy", "sortedIndex", "size", "head", "tail", "unique", "forEach", "inject", "foldl", "foldr", "filter", "every", "some", "contains"]);
 install(Function, _, ["bind", "memoize", "delay", "defer", "throttle", "debounce", "once", "wrap", "compose"]);
 install(Function, _, ["after"], -1);
 
