@@ -10,7 +10,7 @@
   "keywords": [
     "nativity",
     "nativity-plugin",
-    "underscore",
+    "underscore"
   ],
   "author": "Phillip Epstein <phillip@blackandredconsulting.com>",
   "license": "MIT",
@@ -21,5 +21,5 @@
   "dependencies": {
     "underscore": "^1.6.0",
     "nativity": "^1.3.0"
-  },
+  }
 }
